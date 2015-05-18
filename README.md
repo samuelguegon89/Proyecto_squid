@@ -15,7 +15,7 @@
 - Comenzamos descomentando:
 </pre>
 
-*Comenzamos comentando la acl que permite entrar a la red local:*
+*Comenzamos comentando la acl que permite entrar a la red local para que solo permita el acceso de usuario autenticados:*
 
 <pre>
 #http_access allow localnet 
