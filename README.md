@@ -1,24 +1,29 @@
 # Proyecto_squid
 
-Limitaciones para alumnos:
+*Limitaciones para alumnos:*
 <pre>
 - No puede bajar ficheros que se puedan instalar.
 - Sin acceso los fines de semanas
 - Sin ver contenido multimedia
 - Sólo tienen conexión de 8:00 a 14:00 h.
 </pre>
-Limitaciones para profesores:
+
+*Limitaciones para profesores:*
+<pre>
 - No puede bajar ficheros que se puedan instalar.
 - Sin acceso los fines de semanas
 - Comenzamos descomentando:
+</pre>
 
-Comenzamos comentando la acl que permite entrar a la red local:
+*Comenzamos comentando la acl que permite entrar a la red local:*
 
+<pre>
 #http_access allow localnet 
 #http_access allow localhost 
 
-Creamos el listado de acls:
+*Creamos el listado de acls:*
 
+<pre>
 #Para profesores y alumnos: 
 #--------------------------------- 
 acl profesores proxy_auth profesor 
@@ -42,9 +47,11 @@ acl multimedia url_regex -i avi$ mp3$ mp4$ mpeg$ wav$ wmv$ wma$ flv$
 #----------------------------------------- 
 acl horario_clase time MTWHF 8:00-14:00 
 #----------------------------------------- 
+</pre>
 
-Ahora aplicamos nuestras reglas acl mediante la directiva http_access y http_reply_access. Es importante el orden, ya que se recomienda el menor número posible de directivas:
-
+*Ahora aplicamos nuestras reglas acl mediante la directiva http_access y http_reply_access. Es importante el orden, ya que se recomienda el menor número posible de directivas:*
+<pre>
 #Reglas http_access 
 http_access allow alumnos localnet horario_clase !fin_de_semana !multimedia !multimedia2 !no_instalar 
 http_access allow profesores localnet !fin_de_semana !no_instalar 
+</pre>
