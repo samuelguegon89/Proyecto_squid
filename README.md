@@ -1,15 +1,18 @@
 # Proyecto_squid
 
 Limitaciones para alumnos:
-No puede bajar ficheros que se puedan instalar.
-Sin acceso los fines de semanas
-Sin ver contenido multimedia
-Sólo tienen conexión de 8:00 a 14:00 h.
+
+- No puede bajar ficheros que se puedan instalar.
+- Sin acceso los fines de semanas
+- Sin ver contenido multimedia
+- Sólo tienen conexión de 8:00 a 14:00 h.
 
 Limitaciones para profesores:
-No puede bajar ficheros que se puedan instalar.
-Sin acceso los fines de semanas
-Comenzamos descomentando:
+- No puede bajar ficheros que se puedan instalar.
+- Sin acceso los fines de semanas
+- Comenzamos descomentando:
+
+Comenzamos comentando la acl que permite entrar a la red local:
 
 #http_access allow localnet 
 #http_access allow localhost 
