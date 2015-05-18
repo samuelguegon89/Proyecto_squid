@@ -50,6 +50,7 @@ acl horario_clase time MTWHF 8:00-14:00
 </pre>
 
 *Ahora aplicamos nuestras reglas acl mediante la directiva http_access y http_reply_access. Es importante el orden, ya que se recomienda el menor número posible de directivas:*
+
 <pre>
 #Reglas http_access 
 http_access allow alumnos localnet horario_clase !fin_de_semana !multimedia !multimedia2 !no_instalar 
