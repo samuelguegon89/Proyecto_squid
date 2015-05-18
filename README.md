@@ -1,12 +1,12 @@
 # Proyecto_squid
 
 Limitaciones para alumnos:
-
+<pre>
 - No puede bajar ficheros que se puedan instalar.
 - Sin acceso los fines de semanas
 - Sin ver contenido multimedia
 - Sólo tienen conexión de 8:00 a 14:00 h.
-
+</pre>
 Limitaciones para profesores:
 - No puede bajar ficheros que se puedan instalar.
 - Sin acceso los fines de semanas
